@@ -16,7 +16,7 @@ function createBox(boxSize){
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.addEventListener("mouseenter", () => {
-        box.style.backgroundColor = "grey";
+        box.style.backgroundColor = "black";
     });
 
 

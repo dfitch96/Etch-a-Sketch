@@ -1,9 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+.header-text{
+    color: limegreen;
+    font-size: 32px; /* Experiment with a small font size */
+    padding: 25px;
+    font-family: 'Press Start 2P', cursive;
+    
+    
+}
+
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: lightgray;
     height: 100vh;
     width: 100vw;
 }
@@ -27,6 +57,7 @@
     display: flex;
     border-style: solid;
     border-color: grey;
+    background-color: white;
     border-width: 1px;
     
     
