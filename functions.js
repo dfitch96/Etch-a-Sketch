@@ -17,7 +17,12 @@ function initGrid(rows, cols){
         row.classList.add("row")
         for(let c = 0; c < cols; c++){
             let box = document.createElement("div");
+            
             box.classList.add("box")
+            box.addEventListener("mouseenter", () => {
+                box.style.backgroundColor = "grey";
+            });
+            
             row.appendChild(box);
         }
 
