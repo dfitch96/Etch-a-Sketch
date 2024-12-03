@@ -1,10 +1,10 @@
-const INIT_ROWS = 8;
-const INIT_COLS = 16;
+let ROWS = 50;
+let COLS = 50;
 const CONTAINER_SIZE = 960;
 
 
 window.addEventListener('load', () => {
-    initGrid(INIT_ROWS, INIT_COLS);
+    initGrid(ROWS, COLS);
 });
 
 
@@ -23,9 +23,38 @@ function createBox(boxSize){
     return box;
 }
 
+function resetGrid(){
+    console.log("resetGrid");
+    let grid = document.querySelector(".grid");
+    grid.innerHTML = "";
+    initGrid(ROWS, COLS);
+
+}
+
+
+function resizeGrid(){
+    
+    promptText = "Enter a new grid size between 16 to 100: ";
+
+    let newSize = 0;
+    while(true){
+        newSize = prompt(promptText);
+        if (newSize >= 16 && newSize <= 100){
+            break;
+        }
+
+    }
+
+    ROWS = newSize;
+    COLS = newSize;
+    resetGrid();
+    
+}
+
 
 function initGrid(rows, cols){
 
+    console.log("initGrid");
     let container = document.querySelector(".container");
     let grid = document.querySelector(".grid");
  
