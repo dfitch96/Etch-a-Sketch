@@ -48,7 +48,7 @@ li {
 .button{
     background-color: limegreen;
     border-radius: 8px;
-    width: 125px;
+    width: auto;
     height: 45px;
     color: white;
     font-weight: 800;
