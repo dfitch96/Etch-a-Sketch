@@ -15,10 +15,12 @@ function negateRandomize(){
 
 
 function setColorBlack(){
+    randomize = false;
     color = "black";
 }
 
 function setColorWhite(){
+    randomize = false;
     color = "white";
 }
 
