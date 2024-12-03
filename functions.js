@@ -4,6 +4,9 @@ const CONTAINER_SIZE = 960;
 let randomize = false;
 let color = "black";
 
+let isMouseDown = false;
+document.body.addEventListener("mousedown", () => (isMouseDown = true));
+document.body.addEventListener("mouseup", () => (isMouseDown = false));
 
 window.addEventListener('load', () => {
     initGrid(ROWS, COLS);
@@ -24,6 +27,16 @@ function setColorWhite(){
     color = "white";
 }
 
+function changeColor(e){
+    if(e.type === 'mouseover' && !isMouseDown) return;
+
+    if (randomize){
+        e.target.style.backgroundColor = generateRandomColor();
+    } else{
+        e.target.style.backgroundColor = color;
+    }
+}
+
 function createBox(boxSize){
     
     
@@ -31,14 +44,8 @@ function createBox(boxSize){
     box.classList.add("box")
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
-    box.addEventListener("mouseenter", () => {
-        if (randomize){
-            box.style.backgroundColor = generateRandomColor();
-        } else{
-            box.style.backgroundColor = color;
-        }
-        
-    });
+    box.addEventListener("mouseover", changeColor);
+    box.addEventListener("mousedown", changeColor);
 
 
     return box;
