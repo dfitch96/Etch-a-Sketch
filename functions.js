@@ -1,12 +1,26 @@
 let ROWS = 50;
 let COLS = 50;
 const CONTAINER_SIZE = 960;
+let randomize = false;
+let color = "black";
 
 
 window.addEventListener('load', () => {
     initGrid(ROWS, COLS);
 });
 
+function negateRandomize(){
+    randomize = !randomize;
+}
+
+
+function setColorBlack(){
+    color = "black";
+}
+
+function setColorWhite(){
+    color = "white";
+}
 
 function createBox(boxSize){
     
@@ -16,7 +30,12 @@ function createBox(boxSize){
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.addEventListener("mouseenter", () => {
-        box.style.backgroundColor = "black";
+        if (randomize){
+            box.style.backgroundColor = generateRandomColor();
+        } else{
+            box.style.backgroundColor = color;
+        }
+        
     });
 
 
@@ -49,6 +68,15 @@ function resizeGrid(){
     COLS = newSize;
     resetGrid();
     
+}
+
+
+function generateRandomColor(){
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 
