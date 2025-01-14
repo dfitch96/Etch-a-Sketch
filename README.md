@@ -1,6 +1,7 @@
 # Etch-a-Sketch
 
 Welcome to the __Etch-a-Sketch Project__! This project is part of The Odin Project curriculum and serves as a great opportunity to showcase and improve my DOM manipulation skills.
+The Odin Project: https://www.theodinproject.com/lessons/foundations-etch-a-sketch
 Live Preview: https://dfitch96.github.io/Etch-a-Sketch/
 
 ## Project Overview
