@@ -1,8 +1,9 @@
 # Etch-a-Sketch
 
 Welcome to the __Etch-a-Sketch Project__! This project is part of The Odin Project curriculum and serves as a great opportunity to showcase and improve my DOM manipulation skills.
-The Odin Project: https://www.theodinproject.com/lessons/foundations-etch-a-sketch
-Live Preview: https://dfitch96.github.io/Etch-a-Sketch/
+
+- The Odin Project: https://www.theodinproject.com/lessons/foundations-etch-a-sketch
+- Live Preview: https://dfitch96.github.io/Etch-a-Sketch/
 
 ## Project Overview
 The goal of this project is to create a browser-based drawing tool inspired by the classic Etch-a-Sketch toy. The implementation will be a hybrid between a sketchpad and a digital Etch-a-Sketch, allowing users to draw directly on the screen using their mouse or keyboard.
